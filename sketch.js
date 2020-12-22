@@ -12,35 +12,35 @@ function setup(){
     engine = Engine.create();
     world = engine.world;
 
-    ground = new Ground(200,height,2000,20);
+    ground = new Ground(600,590,1200,20);
 
-    box1= new Box(500,350,90,90);
-    box2= new Box(300,350,90,90);
-    box3= new Box(400,350,90,90);
+    box1= new Box(500,350);
+    box2= new Box(600,350);
+    box3= new Box(400,350);
 
-    box4= new Box(500,300,90,90);
-    box5= new Box(300,300,90,90);
-    box6= new Box(400,300,90,90);
+    box4= new Box(500,300);
+    box5= new Box(600,300);
+    box6= new Box(400,300);
 
-    box7= new Box(500,250,90,90);
-    box8= new Box(300,250,90,90);
-    box9= new Box(400,250,90,90);
+    box7= new Box(500,250);
+    box8= new Box(600,250);
+    box9= new Box(400,250);
 
-    box10= new Box(500,200,90,90);
-    box11= new Box(300,200,90,90);
-    box12= new Box(400,200,90,90);
+    box10= new Box(500,200);
+    box11= new Box(600,200);
+    box12= new Box(400,200);
 
-    box13= new Box(500,150,90,90);
-    box14= new Box(300,150,90,90);
-    box15= new Box(400,150,90,90);
+    box13= new Box(500,150);
+    box14= new Box(600,150);
+    box15= new Box(400,150);
 
-    box16= new Box(500,100,90,90);
-    box17= new Box(300,100,90,90);
-    box18= new Box(400,100,90,90);
+    box16= new Box(500,100);
+    box17= new Box(600,100);
+    box18= new Box(400,100);
 
-    ball = new Ball(130, 230, 80, 80);
+    ball = new Ball(120, 240, 50);
 
-    rope = new Rope(ball.body, {x:80, y:100});
+    rope = new Rope(ball.body, {x:120, y:100});
 }
 
 function draw(){
@@ -71,6 +71,7 @@ function draw(){
 
    rope.display();
 }
+
 function mouseDragged(){
     Matter.Body.setPosition(ball.body, {x: mouseX , y: mouseY});
 }

@@ -1,28 +1,25 @@
 class Box {
-    constructor(x, y, width, height) {
+    constructor(x, y) {
       var options = {
-          'restitution':0.8,
-          'friction':1.0,
-          'density':0.04
+          restitution:0.8,
+          friction:1.0,
+          density:0.04
       }
-      this.body = Bodies.rectangle(x, y, width, height, options);
-      this.width = width;
-      this.height = height;
-      
+      this.body = Bodies.rectangle(x, y, 90, 90, options);
       World.add(world, this.body);
     }
+
     display(){
-      var pos =this.body.position;
-      var angle = this.body.angle;
-     push();
-      translate(pos.x, pos.y);
-      rotate(angle);
+      push();
+      translate(this.body.position.x, this.body.position.y);
+      angleMode(RADIANS)
+      rotate(this.body.angle);
       rectMode(CENTER);
-      strokeWeight(3)
-      stroke("white")
+      strokeWeight(2);
+      stroke("white");
       fill("green");
-      rect(0, 0, this.width, this.height);
+      rect(0, 0, 90, 90);
       pop();
     }
-  };
+  }
   
