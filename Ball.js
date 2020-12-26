@@ -12,8 +12,8 @@ class Ball {
     push();
     translate(this.body.position.x, this.body.position.y);
     rotate(this.body.angle);
-    stroke('blue');
-    fill('red');
+    //stroke('blue');
+    fill(41, 41, 41);
     ellipseMode(RADIUS)
     ellipse(0, 0, this.body.circleRadius);
     pop();

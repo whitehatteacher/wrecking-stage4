@@ -7,6 +7,8 @@ class Box {
       }
       this.body = Bodies.rectangle(x, y, 90, 90, options);
       World.add(world, this.body);
+
+      this.img = loadImage("img/b3.jpg")
     }
 
     display(){
@@ -14,11 +16,12 @@ class Box {
       translate(this.body.position.x, this.body.position.y);
       angleMode(RADIANS)
       rotate(this.body.angle);
-      rectMode(CENTER);
-      strokeWeight(2);
-      stroke("white");
-      fill("green");
-      rect(0, 0, 90, 90);
+      imageMode(CENTER);
+      //strokeWeight(2);
+      //stroke("white");
+      //fill("green");
+      //rect(0, 0, 90, 90);
+      image(this.img, 0, 0, 90, 90);
       pop();
     }
   }
